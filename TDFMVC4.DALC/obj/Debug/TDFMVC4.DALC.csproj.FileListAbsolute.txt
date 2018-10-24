@@ -1,0 +1,36 @@
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll.config
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.pdb
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.pdb
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.xml
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.xml
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.csprojResolveAssemblyReference.cache
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.pdb
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll.config
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.pdb
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.pdb
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.xml
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.xml
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.csprojResolveAssemblyReference.cache
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.dll
+C:\NPRT New Oficial\MVC4\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.pdb
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll.config
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.dll
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.DALC.pdb
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.dll
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.dll
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.dll
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\TDFMVC4.Common.pdb
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.xml
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\bin\Debug\EntityFramework.SqlServer.xml
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.csprojResolveAssemblyReference.cache
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.dll
+C:\TFS_SOCP\stackoverflowcodeproject\TDFMVC4\TDFMVC4.DALC\obj\Debug\TDFMVC4.DALC.pdb

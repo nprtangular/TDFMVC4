@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "IndexChica";
+}
+
+<h2>Fotos</h2>
+
+@using (Html.BeginForm("AgregarFoto", "Foto", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <input type="file" name="Imagen" class="form-control" />
+    
+    <br />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Subir Foto" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+
+@foreach (TDFMVC4.Common.Models.Foto item in ViewBag.ListaFotos)
+{
+  <table>
+      <tr>
+          <td><img src="@VirtualPathUtility.ToAbsolute(item.Imagen)" height="300"></td>
+      </tr>
+      <tr>
+          <td>@Html.ActionLink("Eliminar Foto", "EliminarFoto", "Foto", new {Id = item.Id},null)</td>          
+      </tr>
+  </table>  
+    <br />
+} 

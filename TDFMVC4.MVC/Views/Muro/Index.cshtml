@@ -1,0 +1,73 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Index";
+    ////var table = @ViewBag.TableTrabajo.Table.NombreTable;
+}
+
+@if (Model.TipoUsuario == 1)
+{
+
+
+    if (ViewBag.TableTrabajo == null)
+    {
+
+    }
+    else
+    {
+
+        foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.TableTrabajo)
+        {
+
+            <table align="right">
+                <tr>
+                    <th>
+                        <strong>Trabaja En:</strong>
+                    </th>
+
+                    <td>                    
+                        @Html.ActionLink(@item.Table.NombreTable, "Perfil", "Table", new { Id = item.Id}, null)
+                    </td>
+                                        
+                    <td>
+                        @*@Html.ActionLink("Deje de Trabajar Aqui", "DesasignarChicaTable", "Table", new { Id = ViewBag.TableTrabajo.Id }, null)*@
+                        @Html.ActionLink("Deje de Trabajar Aqui", "DesasignarChicaTable", "Table", new { Id = item.Id }, null)
+                    </td>
+                </tr>
+
+            </table>
+        }
+    }
+    <h2>Muro Chica</h2>
+
+
+}
+else if (Model.TipoUsuario == 2)
+{
+    <h2>Muro Usuario</h2>
+
+    foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.CuentasChicas)
+    {
+        <table class="table table-bordered table-striped">
+            <tr>
+
+                @if (item.Foto.Count == 0)
+                {
+
+                }
+                else
+                {
+                    <td>
+                        @Html.ActionLink(@item.NombreUsuario, "Perfil", "Chica", new { NombreUsuario = item.NombreUsuario }, null)
+                    </td>
+
+                    var x = item.Foto.FirstOrDefault();
+                    <td><img src="@VirtualPathUtility.ToAbsolute(x.Imagen)" height="100"></td>
+                    <td>
+                        @Html.ActionLink("Seguir", "Seguir", "Follow", new { Id = item.Id }, null)
+                    </td>
+                }
+            </tr>
+        </table>
+    }
+}

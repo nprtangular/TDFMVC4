@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDFMVC4.Common", "TDFMVC4.Common\TDFMVC4.Common.csproj", "{AA208898-7059-4AD6-8B9F-4865828CB90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDFMVC4.DALC", "TDFMVC4.DALC\TDFMVC4.DALC.csproj", "{1DAF8636-FE93-4D50-A635-4F776253CEFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDFMVC4.BL", "TDFMVC4.BL\TDFMVC4.BL.csproj", "{782103C8-3802-4270-AE6F-AB49CD1D6601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDFMVC4.MVC", "TDFMVC4.MVC\TDFMVC4.MVC.csproj", "{7EE19F3B-AFF2-4053-B2BB-BC6A72CD6A53}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://stackoverflowcodeproject.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TDFMVC4.Common\\TDFMVC4.Common.csproj
+		SccProjectName1 = TDFMVC4.Common
+		SccLocalPath1 = TDFMVC4.Common
+		SccProjectUniqueName2 = TDFMVC4.DALC\\TDFMVC4.DALC.csproj
+		SccProjectName2 = TDFMVC4.DALC
+		SccLocalPath2 = TDFMVC4.DALC
+		SccProjectUniqueName3 = TDFMVC4.BL\\TDFMVC4.BL.csproj
+		SccProjectName3 = TDFMVC4.BL
+		SccLocalPath3 = TDFMVC4.BL
+		SccProjectUniqueName4 = TDFMVC4.MVC\\TDFMVC4.MVC.csproj
+		SccProjectName4 = TDFMVC4.MVC
+		SccLocalPath4 = TDFMVC4.MVC
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA208898-7059-4AD6-8B9F-4865828CB90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA208898-7059-4AD6-8B9F-4865828CB90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA208898-7059-4AD6-8B9F-4865828CB90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA208898-7059-4AD6-8B9F-4865828CB90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAF8636-FE93-4D50-A635-4F776253CEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAF8636-FE93-4D50-A635-4F776253CEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAF8636-FE93-4D50-A635-4F776253CEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAF8636-FE93-4D50-A635-4F776253CEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782103C8-3802-4270-AE6F-AB49CD1D6601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782103C8-3802-4270-AE6F-AB49CD1D6601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782103C8-3802-4270-AE6F-AB49CD1D6601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782103C8-3802-4270-AE6F-AB49CD1D6601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE19F3B-AFF2-4053-B2BB-BC6A72CD6A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE19F3B-AFF2-4053-B2BB-BC6A72CD6A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE19F3B-AFF2-4053-B2BB-BC6A72CD6A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE19F3B-AFF2-4053-B2BB-BC6A72CD6A53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

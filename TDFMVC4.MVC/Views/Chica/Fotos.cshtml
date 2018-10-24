@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Fotos";
+}
+
+<h2>Fotos</h2>
+
+@foreach (var item in ViewBag.ListaFotos)
+{
+     <table>
+      <tr>
+          <td><img src="@VirtualPathUtility.ToAbsolute(item.Imagen)" height="200"></td>
+      </tr>      
+  </table>  
+    <br />
+}

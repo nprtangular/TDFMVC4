@@ -1,0 +1,100 @@
+insert into estadoes
+values('--Seleccione--')
+
+insert into estadoes
+values('Aguascalientes')
+
+insert into estadoes
+values('Baja California	')
+
+insert into estadoes
+values('Baja California Sur	')
+
+insert into estadoes
+values('Campeche')
+
+insert into estadoes
+values('Chiapas')
+
+insert into estadoes
+values('Chihuahua')
+
+insert into estadoes
+values('Coahuila')
+
+insert into estadoes
+values('Colima')
+
+insert into estadoes
+values('Distrito Federal')
+
+insert into estadoes
+values('Durango')
+
+insert into estadoes
+values('Guanajuato')
+
+insert into estadoes
+values('Guerrero')
+
+insert into estadoes
+values('Hidalgo')
+
+insert into estadoes
+values('Jalisco')
+
+insert into estadoes
+values('México')
+
+insert into estadoes
+values('Michoacan')
+
+insert into estadoes
+values('Morelos')
+
+insert into estadoes
+values('Nayarit')
+
+insert into estadoes
+values('Nuevo León')
+
+insert into estadoes
+values('Oaxaca')
+
+insert into estadoes
+values('Puebla')
+
+insert into estadoes
+values('Querétaro')
+
+insert into estadoes
+values('Quintana Roo')
+
+insert into estadoes
+values('San Luis Potosí')
+
+insert into estadoes
+values('Sinaloa')
+
+insert into estadoes
+values('Sonora')
+
+insert into estadoes
+values('Tabasco')
+
+insert into estadoes
+values('Tamaulipas')
+
+insert into estadoes
+values('Tlaxcala')
+
+insert into estadoes
+values('Veracruz')
+
+insert into estadoes
+values('Yucatán')
+
+insert into estadoes
+values('Zacatecas')
+
+select * from Estadoes 

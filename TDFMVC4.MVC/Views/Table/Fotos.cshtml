@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Fotos";
+}
+
+<h2>Fotos</h2>
+
+@foreach (var item in ViewBag.ListaFotos)
+{
+     <table>
+      <tr>
+          <td><img src="@VirtualPathUtility.ToAbsolute(item.Imagen)" height="200"></td>
+      </tr>      
+  </table>  
+    <br />
+}
+
+@using (Html.BeginForm("AgregarFotoATable", "Foto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="Imagen" class="form-control" />
+    <br />
+
+    <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Subir Foto" class="btn btn-default" />
+        </div>
+    </div>
+}

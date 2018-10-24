@@ -1,0 +1,31 @@
+﻿@model TDFMVC4.Common.Models.Table
+
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Busque Table Por Estado Para Asignar : </h2>
+
+@using (Html.BeginForm("BuscarTableChica", "Table", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        @********************** 02 - CATALOGO  ESTADOS **********************@
+        <div class="form-group">
+            @Html.LabelFor(x => x.EstadoId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(x => x.EstadoId, new SelectList(ViewBag.ListaEstados, "Id", "Nombre"))
+
+                @Html.ValidationMessageFor(x => x.EstadoId, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        @***********************************************************************@
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Buscar Table" class="btn btn-default" />
+        </div>
+    </div>
+
+}

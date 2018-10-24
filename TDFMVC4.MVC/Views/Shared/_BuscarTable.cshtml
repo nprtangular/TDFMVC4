@@ -1,0 +1,39 @@
+﻿@model TDFMVC4.Common.Models.Table
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    TDFMVC4.BL.Facade.FacadeEstado facAEstado = new TDFMVC4.BL.Facade.FacadeEstado();
+    var listaEstados = facAEstado.obtenerEstados();
+    ViewBag.ListaEstados = listaEstados;    
+}
+
+@using (Html.BeginForm("Buscar", "Table", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        @********************** 02 - CATALOGO  ESTADOS **********************@
+        <div class="form-group">
+            @*@Html.LabelFor(x=> x.EstadoId ,  new {@class = "control-label col-md-2"})*@
+            <span class=" col-md-8" >
+                <strong>Buscar Tables En:</strong>
+            </span>
+
+            <br />
+            <div class="col-md-10">
+                @Html.DropDownListFor(x=> x.EstadoId, new SelectList(ViewBag.ListaEstados, "Id", "Nombre"))
+                @Html.ValidationMessageFor(x=>x.EstadoId , null, new {@class = "text-danger"})
+            </div>
+        </div>
+        @***********************************************************************@
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Buscar Table" class="btn btn-default" />
+        </div>
+    </div>
+    
+}

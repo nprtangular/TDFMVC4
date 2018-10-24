@@ -1,0 +1,72 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+
+<h2>Configuracion General de la Cuenta</h2>
+
+
+@if (Model.TipoUsuario == 1)
+{
+    
+    <table>
+        <tr>
+            <th>Nombre Usuario</th>
+            <td>@Model.NombreUsuario</td>
+        </tr>
+        <tr>
+            <th>Nombre Artistico</th>
+            <td>@Model.Chica.NombreArtistico</td>
+            <td>@Html.ActionLink("Editar", "EditarNombreArtistico", "Perfil", new { Id = @Model.Id }, null)</td>
+        </tr>
+        <tr>
+            <th>Correo</th>
+            <td>@Model.Correo </td>
+        </tr>
+    </table>
+
+}
+else if (Model.TipoUsuario == 2)
+{ 
+    
+    <br />
+    <table>
+        <tr>
+            <th>Nombre Usuario</th>
+            <td>@Model.NombreUsuario</td>
+        </tr>
+        <tr>
+            <th>Lugar de Nacimiento</th>
+            <td>@Model.Usuario.LugarNacimiento</td>
+            <td>@Html.ActionLink("Editar", "UsuarioEditarLugarDeNacimiento", "Perfil", new { NombreUsuario = @Model.NombreUsuario}, null)</td>
+
+        </tr>
+        <tr>
+            <th>Correo</th>
+            <td>@Model.Correo </td>
+        </tr>
+    </table>
+}
+else if (Model.TipoUsuario == 3)
+{ 
+    
+    <br />
+    <table>
+        <tr>
+            <th>Nombre Usuario</th>
+            <td>@Model.NombreUsuario</td>
+        </tr>
+        <tr>
+            <th>Chicas En Escena</th>
+            <td>@Model.Table.ChicasEnEscena</td>
+            <td>@Html.ActionLink("Editar", "TableEditarChicasEnEscena", "Perfil", new { NombreUsuario = @Model.NombreUsuario }, null)</td>
+
+        </tr>
+        <tr>
+            <th>Correo</th>
+            <td>@Model.Correo </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,58 @@
+﻿
+@model TDFMVC4.Common.Models.RegistrarChica
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("RegistrarChica", "Registrar", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>Usuario</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, null,new{@class ="text-danger"})
+    
+         <div class="form-group">
+             @Html.LabelFor(x=> x.NombreUsuario,  new {@class = "control-label col-md-2"})
+             <div class="col-md-10">
+                 @Html.EditorFor(x=>x.NombreUsuario, new {@htmlAttributes = new {@class = "form-control"}})
+                 @Html.ValidationMessageFor(x=>x.NombreUsuario , null, new {@class = "text-danger"})
+             </div>
+         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.NombreArtistico , new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.NombreArtistico, new { @htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.NombreArtistico, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Correo , new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.Correo, new { @htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.Correo, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Contrasena, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.Contrasena, new { @htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.Contrasena, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Registrar" class="btn btn-default" />
+            </div>
+        </div>
+
+     </div>
+}

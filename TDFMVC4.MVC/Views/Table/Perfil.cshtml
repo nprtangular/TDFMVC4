@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Table";
+}
+
+<h2>@Model.Table.NombreTable</h2>
+
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Consumo Por Persona:</th>
+        <td>$@Model.Table.ConsumoXPersona</td>
+    </tr>
+
+    <tr>
+        <th>Chicas en Escena:</th>
+        <td>@Model.Table.ChicasEnEscena</td>
+    </tr>
+
+    <tr>
+        <th>Telefono Reservaciones:</th>
+        <td>@Model.Table.TelefonoReservacion</td>
+    </tr>
+
+    <tr>
+        <th>Fotos @Model.Table.NombreTable:</th>
+        <td>@Html.ActionLink("Ver Fotos", "Fotos", "Table", new { Id = Model.Id }, null)</td>
+    </tr>
+
+    <tr>
+        <th>Chicas Trabajando en @Model.Table.NombreTable:</th>
+        <td>@Html.ActionLink("Ver Chicas", "Chicas", "Table", new { Id = Model.Id }, null)</td>
+    </tr>
+    
+    <tr>
+        <th>Opiniones de @Model.Table.NombreTable:</th>
+        <td>@Html.ActionLink("Opiniones", "Opiniones", "Table", new { Id = Model.Id }, null)</td>
+    </tr>
+
+
+
+</table>
+

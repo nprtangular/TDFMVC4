@@ -1,0 +1,132 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+
+
+        @**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*@
+        @**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*@
+        @*La aplicacion sigue trabajando con el validador en Google, mas no en internet explorer
+        para las validaciones no es indispensable para los data notations*@
+        
+        @*@Scripts.Render("~/bundles/jqueryval")*@
+
+        @**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*@
+        @**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*@
+        
+    </head>
+ 
+   <body ng-app="MyApp2"> @*Aqui nos indica que los elementos <body  > los controla angular*@
+   
+       @*<body>*@    
+
+       @************************ ANGULAR ************************@
+       @Scripts.Render("~/bundles/angular")
+       <script src="~/Scripts/Angular/TableControllerJS.js"></script>
+       @************************ ANGULAR ************************@
+
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+        @*            <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>*@
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                   
+                     <nav>
+                        @if (HttpContext.Current.Session[TDFMVC4.Common.Sessions.SessionConst.CurrentSessionKey] == null)
+                        { 
+                            <ul id="menu">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            </ul>
+                        }
+                        else if ( @ViewBag.TipoUsuario ==1)
+                        { 
+                         <ul id="menu">
+                             <li>@Html.ActionLink("Muro", "Index", "Muro")</li>
+                             <li>@Html.ActionLink("Fotos", "Index", "Foto")</li>
+                             <li>@Html.ActionLink("Perfil", "Index", "Perfil")</li>
+                             <li>@Html.ActionLink("Seguidores", "Index", "Follow")</li> 
+                             <li>@Html.ActionLink("Table", "Seleccionar", "Table")</li>
+
+                         </ul>
+                        }
+                        else if (@ViewBag.TipoUsuario == 2)
+                        {
+                            <ul id="menu">
+                                <li>@Html.ActionLink("Fotos", "Index", "Foto")</li>
+                                <li>@Html.ActionLink("Perfil", "Index", "Perfil")</li>
+                                <li>@Html.ActionLink("Siguiendo", "Index", "Follow")</li>
+                            </ul>
+                        }
+                        else if (@ViewBag.TipoUsuario == 3)
+                        {
+                            <ul id="menu">
+                                <li>@Html.ActionLink("Fotos", "Index", "Foto")</li>
+                                <li>@Html.ActionLink("Perfil", "Index", "Perfil")</li>
+                                <li>@Html.ActionLink("Seguidores", "Index", "Follow")</li>
+                                <li>@Html.ActionLink("Chicas", "Chicas", "Table")</li>
+                            </ul>
+                        }  
+
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <div id="body">
+
+            <div style="float:left; width:23%">
+            
+                @if (HttpContext.Current.Session[TDFMVC4.Common.Sessions.SessionConst.CurrentSessionKey] != null)
+                {
+                    @Html.Partial("_BuscarTable", new TDFMVC4.Common.Models.Table())
+                }
+
+                @*<section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>*@
+
+            </div>
+
+            <div style="float:right; width:76%" >
+                @*@RenderSection("featured", required: false)*@
+                <section class="content-wrapper clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+
+       @*//Bootstrap requiere de Jquery siempre va despues*@
+
+
+
+       @************************ BOOTSTRAP ************************@
+       <link href="~/Content/bootstrap.css" rel="stylesheet" />
+       <script src="~/Scripts/bootstrap.js"></script>
+       @************************ BOOTSTRAP ************************@
+
+        @RenderSection("scripts", required: false)
+       @Scripts.Render("~/bundles/jqueryval")
+
+    </body>
+</html>

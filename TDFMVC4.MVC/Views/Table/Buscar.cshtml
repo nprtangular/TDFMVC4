@@ -1,0 +1,29 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Tables en el Estado : </h2>
+
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Nombre Table</th>
+        <th>Consumo Por Persona</th>
+        <th>Chicas en Escena</th>
+        <th>Visitar Table</th>
+    </tr>
+    
+
+    @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaTables)
+    {
+        <tr>            
+            <td>@item.Table.NombreTable</td>                
+            <td>$@item.Table.ConsumoXPersona</td>
+            <td>@item.Table.ChicasEnEscena</td>
+            <td>@Html.ActionLink("Ver", "Perfil", "Table", new { Id = item.Id }, null)</td>
+        </tr>
+    }
+
+</table>

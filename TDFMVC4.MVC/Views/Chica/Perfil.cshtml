@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Table";
+}
+
+<h2>@Model.Chica.NombreArtistico</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Nombre Artistico:</th>
+        <td>@Model.Chica.NombreArtistico</td>
+    </tr>
+
+    <tr>
+        <th>Fotos @Model.Chica.NombreArtistico:</th>
+        <td>@Html.ActionLink("Ver Fotos", "Fotos", "Chica", new { NombreUsuario = Model.NombreUsuario }, null)</td>
+    </tr>
+
+    <tr>
+        @if (ViewBag.TableTrabajo == null)
+        {
+
+        }
+        else
+        { 
+            <th>Trabaja en @ViewBag.TableTrabajo.Table.NombreTable:</th>
+            <td>@Html.ActionLink("Ver Table", "Table", "Table", new { Id = ViewBag.TableTrabajo.Id}, null)</td>
+        }
+
+        
+    </tr>
+
+</table>
+

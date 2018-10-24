@@ -1,0 +1,62 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Seguir";
+}
+
+@if (Model.TipoUsuario == 1)
+{
+    <h2>Seguidores</h2>
+
+    <table class="table table-bordered table-striped">
+
+        @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaSeguidores)
+        {
+            <tr>
+                @*<td>@item.NombreUsuario</td>*@
+                <td>@Html.ActionLink(@item.NombreUsuario, "Perfil", "Usuario", new { NombreUsuario = item.NombreUsuario }, null)</td>
+            </tr>
+        }
+
+    </table>
+}
+else if (Model.TipoUsuario == 2)
+{
+
+    <h2>Siguiendo</h2>
+    <table class="table table-bordered table-striped">
+
+        @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaSiguiendo)
+        {
+            <tr>
+                @if (item.Foto.Count == 0)
+                {
+
+                }
+                else
+                {
+                    <td>
+                        @Html.ActionLink(@item.NombreUsuario, "Perfil", "Chica", new { NombreUsuario = item.NombreUsuario }, null)
+                    </td>
+
+                    var x = item.Foto.FirstOrDefault();
+                    <td>
+                        <img src="@VirtualPathUtility.ToAbsolute(x.Imagen)" height="100">
+                    </td>
+                    <td>
+                        @Html.ActionLink("Dejar de Seguir", "DejarDeSeguir", "Follow", new { Id = item.Id }, null)
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+}
+    
+
+
+
+
+
+
+
+

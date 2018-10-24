@@ -1,0 +1,35 @@
+﻿@*@if (Request.IsAuthenticated) {
+    <text>
+        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("Registrar Chica", "IndexChica", "Registrar")</li>
+        <li>@Html.ActionLink("Registrar Usuario", "IndexUsuario", "Registrar")</li>
+        <li>@Html.ActionLink("Log in", "Index", "Login")</li>
+    </ul>
+}*@
+
+
+@if (HttpContext.Current.Session[TDFMVC4.Common.Sessions.SessionConst.CurrentSessionKey] == null)
+{ 
+    <ul>
+        <li>@Html.ActionLink("Registrar Chica", "IndexChica", "Registrar")</li>
+        <li>@Html.ActionLink("Registrar Table", "IndexTable", "Registrar")</li>
+        <li>@Html.ActionLink("Registrar Usuario", "IndexUsuario", "Registrar")</li>
+        <li>@Html.ActionLink("Log in", "Index", "Login")</li>
+    </ul>
+}
+else
+{    
+    <text>
+    ¡Hola @ViewBag.NombreUsuario @Html.ActionLink("Log Out", "LogOut", "Login")
+    </text>
+}
+
+
+

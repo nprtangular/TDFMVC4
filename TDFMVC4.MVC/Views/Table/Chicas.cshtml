@@ -1,0 +1,33 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Chicas Trabajando En: @ViewBag.NombreTable</h2>
+
+@foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaChicas)
+{
+    <table class="table table-bordered table-striped">
+        <tr>
+            @if (item.Foto.Count == 0)
+            {
+
+            }
+            else
+            {
+                <td>
+                    @Html.ActionLink(@item.NombreUsuario, "Perfil", "Chica", new { NombreUsuario = item.NombreUsuario }, null)
+                </td>
+                
+                var x = item.Foto.FirstOrDefault();
+                
+                <td>
+                    <img src="@VirtualPathUtility.ToAbsolute(x.Imagen)" height="100">
+                </td>
+            }
+
+        </tr>
+    </table>
+}
+

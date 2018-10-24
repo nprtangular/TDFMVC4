@@ -1,0 +1,78 @@
+﻿@model TDFMVC4.Common.Models.Post
+
+@{
+    ViewBag.Title = "Opiniones";
+}
+
+<h2>Opiniones</h2>
+
+
+@using (Html.BeginForm("Opiniones", "Table", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>Usuario</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.DescripcionPost, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.DescripcionPost, new { @htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.DescripcionPost, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="hidden" id="Id" name="Id" value="@ViewBag.Cuenta.Id" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Escribir Opinion" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+}
+
+<table>
+    @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaDeComentarios)
+    {
+        <tr>
+            @if (item.Foto.Count == 0)
+            {
+
+            }
+            else
+            {
+                @*<td>
+                     
+                    </td>*@
+
+                var x = item.Foto.FirstOrDefault();
+                <td>
+                    <img src="@VirtualPathUtility.ToAbsolute(x.Imagen)" height="50">
+                </td>
+
+                <td>
+                    <strong>
+                        @Html.ActionLink(@item.NombreUsuario, "Perfil", "Usuario", new { NombreUsuario = item.NombreUsuario }, null)
+
+                        @*@item.NombreUsuario*@
+                    </strong>
+                </td>
+
+                var z = item.Post.FirstOrDefault();
+                <td>
+                    @z.DescripcionPost
+                    @*@item.Post.DescripcionPost*@
+                </td>
+
+            }
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,73 @@
+﻿@model TDFMVC4.Common.Models.Cuenta
+
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Tables en el Estado : </h2>
+
+
+
+@if (ViewBag.VerificarSiChicaTieneTable == false)
+{
+    <table class="table table-bordered table-striped">
+
+        <tr>
+            <th>Table Dance</th>
+        </tr>
+        @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaTables)
+        {
+            <tr>
+                @*<td>@item.Table.NombreTable</td>*@
+                <td>
+                    @Html.ActionLink(@item.NombreUsuario, "Perfil", "Chica", new { NombreUsuario = item.NombreUsuario }, null)
+                </td>
+
+                <td>@Html.ActionLink("Trabajo Aqui", "AsignarChicaTable", "Table", new { Id = item.Id }, null)</td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+
+        <tr>
+            <th>Table Actual</th>
+            <th>Nombre de Usuario</th>
+        </tr>
+
+        @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.TableActual)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(@item.Table.NombreTable , "Perfil", "Table", new { Id = item.Id }, null)
+                </td>
+
+                <td>@item.NombreUsuario</td>
+                <td>@Html.ActionLink("Deje de Trabajar Aqui", "DesasignarChicaTable", "Table", new { Id = item.Id }, null)</td>
+            </tr>
+        }
+
+
+    </table>
+
+    <table class="table table-bordered table-striped">
+
+        @foreach (TDFMVC4.Common.Models.Cuenta item in ViewBag.ListaTables)
+        {
+            <td>
+                @Html.ActionLink(@item.Table.NombreTable, "Perfil", "Table", new { Id = item.Id }, null)
+            </td>
+
+            @*<tr>
+                    <td>@item.Table.NombreTable</td>
+                </tr>*@
+        }
+
+    </table>
+}
+
+
+
